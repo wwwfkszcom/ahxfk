@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h1> {{message}}2222</h1>
+  <h1 v-pre> {{message}}</h1>
+  <h1 v-once> {{message}}</h1>
+  <h3>{{name}}</h3>
+  <li v-for="item in movies">{{item}}</li>
+  <li>{{movies[3]}}</li>
+  <h2>{{firstName}}{{lastName}}</h2>
+  <h2>{{firstName+lastName}}</h2>
+  <h2>{{counter*2}}</h2>
+  <h2 v-html="url"></h2>
+
+</div>
+<div>
+
+
+</div>
+<script src="./js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {//定义数据
+      message: '你好啊,林勇勇',
+      name: 'coderwhy',
+      movies: ['星级穿越', '大话西游', '少年派', '盗墓空间'],
+      firstName:'fengke',
+      lastName:'lin',
+      counter:20,
+      url:'<a href="http://www.baidu.com">百度一下</a>'
+    }
+  })
+</script>
+</body>
+</html>
